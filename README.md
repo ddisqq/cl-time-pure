@@ -1,6 +1,11 @@
-# cl-time-pure
+# Time Pure
 
-Date/time handling for Common Lisp with ZERO external dependencies.
+Utility library providing specialized functionality for Common Lisp applications.
+
+## Features
+
+- Core functionality implementation
+- Pure Common Lisp (zero external dependencies)
 
 ## Installation
 
@@ -8,41 +13,27 @@ Date/time handling for Common Lisp with ZERO external dependencies.
 (asdf:load-system :cl-time-pure)
 ```
 
-## API
-
-### Timestamp Creation
-- `now` - Current timestamp
-- `encode-timestamp` - Create from components
-- `universal-to-timestamp` - From universal time
-- `parse-timestring` - Parse ISO 8601 string
-
-### Timestamp Access
-- `decode-timestamp` - Extract components
-- `timestamp-to-universal` - To universal time
-- `day-of-week` - Get day of week (0=Monday)
-
-### Arithmetic
-- `timestamp+` - Add duration
-- `timestamp-` - Subtract duration or timestamps
-
-### Comparison
-- `timestamp<`, `timestamp<=` - Less than
-- `timestamp>`, `timestamp>=` - Greater than
-- `timestamp=` - Equality
-
-### Formatting
-- `format-timestring` - Format to string
-
-## Example
+## Usage
 
 ```lisp
-(let ((ts (now)))
-  (format-timestring nil ts :format :iso-8601))
-; => "2024-01-15T10:30:00Z"
-
-(timestamp+ (now) :day 7) ; One week from now
+;; Example usage
+(main-function)
 ```
+
+## Testing
+
+```lisp
+(asdf:test-system :cl-time-pure)
+```
+
+## API
+
+- `main-function - Primary function for core functionality`
 
 ## License
 
-BSD-3-Clause. Copyright (c) 2024-2026 Parkian Company LLC.
+BSD-3-Clause License - See LICENSE file for details.
+
+---
+Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
+SPDX-License-Identifier: BSD-3-Clause
