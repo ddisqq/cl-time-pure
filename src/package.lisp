@@ -8,7 +8,11 @@
   (:use #:cl)
   (:nicknames #:time-pure)
   (:export
-   #:with-time-pure-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-time-pure-timing
    #:time-pure-batch-process
    #:time-pure-health-check;; Timestamp type
    #:timestamp
