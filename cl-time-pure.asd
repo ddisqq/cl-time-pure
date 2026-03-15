@@ -6,16 +6,16 @@
 
 (asdf:defsystem #:cl-time-pure
   :description "Date/time handling for Common Lisp - pure implementation"
-  :author "Parkian Company LLC"
+  :author "Park Ian Co"
   :license "Apache-2.0"
   :version "0.1.0"
   :serial t
   :components ((:file "package")
                (:module "src"
-                :components ((:file "timestamp")
-                             (:file "arithmetic")
-                             (:file "format")
-                             (:file "parse")))))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-time-pure" :depends-on ("package" "conditions" "types")))))))
 
 (asdf:defsystem #:cl-time-pure/test
   :description "Tests for cl-time-pure"

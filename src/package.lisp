@@ -8,7 +8,9 @@
   (:use #:cl)
   (:nicknames #:time-pure)
   (:export
-   ;; Timestamp type
+   #:with-time-pure-timing
+   #:time-pure-batch-process
+   #:time-pure-health-check;; Timestamp type
    #:timestamp
    #:timestamp-p
    ;; Creation
